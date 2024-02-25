@@ -11,10 +11,10 @@ COPY package*.json ./
 RUN npm install
 
 # Copiar el codigo del servidor en el contenedor
-COPY server.js .
+COPY servidor-tcp.js .
 
 # Mostrar el puerto
 EXPOSE 3075
 
 # Comando para correr el script
-CMD ["node", "server.js"]
+CMD ["node", "servidor-tcp.js"]
